@@ -13,6 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Player">
+      <UniqueIdentifier>{0b2bf037-f1dc-46d4-8c04-1675496a32b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\WindowStuff">
+      <UniqueIdentifier>{3c2f0b64-2e85-454b-8884-90ba41f2f2eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Abstractions">
+      <UniqueIdentifier>{b1603bb0-0f08-4250-8aff-47d9ef22c201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Game">
+      <UniqueIdentifier>{7e76009a-3f83-495b-bf7d-a3e358a16fd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Abstractions\Math">
+      <UniqueIdentifier>{db92b440-b830-4f69-aaf3-fa5e35c3c18f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -21,13 +36,43 @@
     <ClInclude Include="targetver.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Исходные файлы\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWindow.h">
+      <Filter>Исходные файлы\WindowStuff</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Исходные файлы\Abstractions\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Исходные файлы\Abstractions\Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Player.cpp">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWindow.cpp">
+      <Filter>Исходные файлы\WindowStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Исходные файлы\Abstractions</Filter>
     </ClCompile>
     <ClCompile Include="NotGame.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Исходные файлы\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>Исходные файлы\Abstractions\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>Исходные файлы\Abstractions\Math</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
