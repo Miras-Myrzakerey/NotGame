@@ -27,7 +27,7 @@ int Player::getActualKey(int keyCode) {
 
 void Player::handleMovement(int keyCode, int width, int height) {
 	int key = getActualKey(keyCode);
-	if (walkingClock.getElapsedTime().asMilliseconds() > 100) {
+	if (walkingClock.getElapsedTime().asMilliseconds() > 75) {
 		setTexture(mainTexture);
 		sf::Vector2f cur = mainSprite.getPosition() + displacement[key];
 
