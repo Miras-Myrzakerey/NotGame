@@ -28,6 +28,9 @@
     <Filter Include="Исходные файлы\Abstractions\Math">
       <UniqueIdentifier>{db92b440-b830-4f69-aaf3-fa5e35c3c18f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Objects">
+      <UniqueIdentifier>{5408fa19-5acc-4f12-b781-9c22002d4abd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -51,6 +54,9 @@
     <ClInclude Include="Rectangle.h">
       <Filter>Исходные файлы\Abstractions\Math</Filter>
     </ClInclude>
+    <ClInclude Include="Chest.h">
+      <Filter>Исходные файлы\Objects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
@@ -73,6 +79,9 @@
     </ClCompile>
     <ClCompile Include="Rectangle.cpp">
       <Filter>Исходные файлы\Abstractions\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Chest.cpp">
+      <Filter>Исходные файлы\Objects</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -23,6 +23,7 @@ public:
 	void setSpriteWidth(const int &newW);
 	void setSpriteHeight(const int &newH);
 	bool checkCollision(Object b);
+	void printHitbox();
 protected:
 	sf::Texture mainTexture;
 	sf::Sprite mainSprite;

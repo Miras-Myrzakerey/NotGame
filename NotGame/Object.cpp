@@ -7,9 +7,9 @@ Object::Object()
 
 Object::Object(const std::vector<int> &frames, const int &width, const int &height)
 {
-	spriteWidth = width;
-	spriteHeight = height;
-	numberOfFrames = frames;
+	this->spriteWidth = width;
+	this->spriteHeight = height;
+	this->numberOfFrames = frames;
 }
 
 Object::~Object()
@@ -18,6 +18,9 @@ Object::~Object()
 
 void Object::setPosition(const sf::Vector2f &pos) {
 	mainSprite.setPosition(pos);
+	sf::Vector2f cur = mainSprite.getPosition();
+	hitbox.setLeftPoint(Point(cur.x, cur.y));
+	hitbox.setRightPoint(Point(cur.x + spriteWidth, cur.y + spriteHeight));
 }
 
 bool Object::initSprite(std::string filePath) {
@@ -30,8 +33,8 @@ bool Object::initSprite(std::string filePath) {
 	}
 }
 
-void Object::moveObject(const sf::Vector2f &offset) {
-	mainSprite.move(offset);
+void Object::moveObject(const sf::Vector2f &newPos) {
+	setPosition(newPos);
 }
 
 sf::Vector2f Object::getPosition() {
@@ -71,4 +74,10 @@ void Object::setSpriteHeight(const int & newH)
 bool Object::checkCollision(Object b)
 {
 	return hitbox.checkOverlap(b.hitbox);
+}
+
+void Object::printHitbox()
+{
+	hitbox.getLeftPoint().print();
+	hitbox.getRightPoint().print();
 }

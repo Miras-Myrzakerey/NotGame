@@ -6,10 +6,10 @@ Player::Player()
 }
 
 Player::Player(const std::vector<int>& frames, const int & width, const int & height)
-{
-	setFrames(frames);
-	setSpriteWidth(width);
-	setSpriteHeight(height);
+:Object(frames, width, height){
+	this->setFrames(frames);
+	this->setSpriteWidth(width);
+	this->setSpriteHeight(height);
 }
 
 Player::~Player()
@@ -34,7 +34,7 @@ void Player::handleMovement(int keyCode, int width, int height) {
 		if (cur.x < 0 || cur.x > width || cur.y < 0 || cur.y > height) {
 			return;
 		}
-		moveObject(displacement[key]);
+		moveObject(cur);
 		if (key != currentAnimRow) {
 			currentAnimRow = key;
 			currentAnimColumn = 0;
